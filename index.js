@@ -151,7 +151,7 @@ modal.createNewProductBtn().onclick = async function () {
     closeNewProductModal();
     showLoading();
 
-    fetch("https://toproduct-api-production.up.railway.app//products", {
+    fetch("https://toproduct-api-production.up.railway.app/products", {
         method: "POST",
         headers: {
             "Content-Type": "application/json",
