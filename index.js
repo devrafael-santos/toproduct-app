@@ -57,7 +57,7 @@ function setProductOnModal(product) {
     document.getElementById("product-description").innerText = product.description;
     document.getElementById("product-price").innerText = product.price;
 
-    if (product.available == "true") {
+    if (product.available) {
         document.getElementById("product-isAvailable").innerText = "Disponível";
         document.getElementById("product-isAvailable").style.color = "green";
     } else {
