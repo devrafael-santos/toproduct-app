@@ -1,0 +1,282 @@
+
+#new-product-modal-section {
+    display: none;
+    position: fixed;
+    z-index: 1;
+    left: 0;
+    top: 0;
+
+    overflow: auto;
+
+    width: 100%;
+    height: 100%;
+
+    background-color: rgb(0, 0, 0);
+    background-color: rgba(0, 0, 0, 0.4);
+
+    box-shadow: -4px 4px -4px 0px rgba(0, 0, 0, 0.30);
+}
+
+.new-product-modal {
+    position: relative;
+
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+
+    margin: 5rem auto 5rem auto;
+
+    width: min(calc(100% - 40px), 40rem);
+    height: 45rem;
+
+    border-radius: 5px;
+    border: 1px solid #FFF;
+    background: #1E2326;
+    box-shadow: -5px 5px 5px 0px rgba(0, 0, 0, 0.25);
+
+    animation-name: animatetop;
+    animation-duration: 0.5s;
+}
+
+.modal-header {
+    text-align: center;
+
+    width: 100%;
+    height: 7.2rem;
+    border-bottom: 1px solid #FFF;
+}
+
+.modal-header-text {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+
+    width: 100%;
+    padding: 1rem 1rem;
+
+    border-top-left-radius: 25px;
+    border-top-right-radius: 25px;
+
+    color: #FFF;
+}
+
+.close {
+    float: right;
+
+    width: 1rem;
+
+    margin-top: 0.5rem;
+    margin-right: 0.5rem;
+}
+
+.close:hover,
+.close:focus {
+    color: black;
+    text-decoration: none;
+    cursor: pointer;
+}
+
+.modal-body {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+}
+
+#new-product-form {
+    display: flex;
+    flex-direction: column;
+
+    width: 100%;
+
+    margin-top: 1.7rem;
+}
+
+.new-product-label {
+    font-size: 1.2rem;
+    font-weight: 600;
+
+    margin-bottom: 0.5rem;
+
+    color: #FFF;
+}
+
+.require-input {
+    display: none;
+    text-align: center;
+
+    width: 100%;
+
+    background-color: #6F4B47;
+    color: #E97770;
+}
+
+#new-product-form input {
+    width: 100%;
+    height: 2.5rem;
+
+    padding: 1rem;
+    margin-bottom: 1.7rem;
+
+    background-color: #365656;
+    border-style: none;
+    color: #FFF;
+    outline: none;
+
+    font-size: 1rem;
+}
+
+.product-available-div {
+    display: flex;
+    align-items: center;
+
+    gap: 2rem;
+
+    margin-top: 1rem;
+    margin-bottom: 4.5rem;
+}
+
+.product-available-div .new-product-label {
+    margin-bottom: 0;
+}
+
+.btns-div {
+    display: flex;
+    justify-content: center;
+    gap: 1px;
+
+    height: 3rem;
+    width: 3rem;
+}
+
+#no-btn {
+    border-radius: 20px 0px 0px 20px;
+
+    border-right: 1px #000 solid;
+
+    background-color: rgba(231, 46, 36, 0.90);
+    border-style: none;
+    color: rgba(255, 255, 255, 0.90);
+    font-size: 1rem;
+    font-weight: 600;
+}
+
+#no-btn:hover {
+    border-radius: 20px 0px 0px 20px;
+
+    cursor: pointer;
+
+    background-color: rgba(231, 46, 36, 1);
+    box-shadow: none;
+    border-style: none;
+    color: rgba(255, 255, 255, 1);
+    font-size: 1rem;
+    font-weight: 600;
+}
+
+.no-btn-off {
+    background-color: rgba(184, 37, 29, 0.5);
+    box-shadow: 0px 0px 40px 0px rgba(0, 0, 0, 0.5) inset;
+    background-color: rgba(231, 46, 36, 0.5);
+}
+
+#yes-btn {
+    border-radius: 0px 20px 20px 0px;
+
+    background-color: rgba(20, 223, 129, 0.9);
+    border-style: none;
+    font-size: 1rem;
+    font-weight: 600;
+    color: #6b6b6b;
+}
+
+.yes-btn-off {
+    background-color: rgba(17, 189, 108, 0.9);
+    box-shadow: 0px 0px 40px 0px rgba(0, 0, 0, 0.5) inset;
+    columns: #000;
+}
+
+#yes-btn:hover {
+    border-radius: 0px 20px 20px 0px;
+
+    cursor: pointer;
+
+    background-color: rgba(20, 223, 129, 1);
+    box-shadow: none;
+    border-style: none;
+    font-size: 1rem;
+    font-weight: 600;
+    color: #6b6b6b;
+}
+
+#create-new-product-btn {
+    width: 25rem;
+    height: 4rem;
+
+    margin-bottom: 3rem;
+
+    border-radius: 53px;
+    border: none;
+
+    font-size: 2rem;
+    color: #FFF;
+    font-weight: 600;
+
+    background-color: rgba(28, 134, 95, 1);
+}
+
+#create-new-product-btn:hover {
+
+    cursor: pointer;
+    background-color: rgb(41, 145, 107);
+}
+
+@media screen and (max-width: 500px) {
+
+    .product-available-div {
+        flex-direction: column;
+
+        gap: 0.9rem;
+        margin-bottom: 2.5rem;
+    }
+
+    #new-product-form {
+        display: flex;
+        flex-direction: column;
+
+        width: 100%;
+    
+        margin-top: 1.7rem;
+    }
+
+    #new-product-form {
+        width: 100%;
+    }
+
+    
+
+
+    #create-new-product-btn {
+        width: 12rem;
+        height: 3rem;
+    }
+}
+
+@media screen and (max-width: 310px) {
+
+    .modal-header-text {
+        font-size: 0.8rem;
+    }
+
+}
+
+@keyframes animatetop {
+    from {
+        top: -300px;
+        opacity: 0
+    }
+
+    to {
+        top: 0;
+        opacity: 1
+    }
+}
