@@ -97,6 +97,19 @@ function closeNewProductModal() {
 
 document.getElementsByClassName("new-btn")[0].onclick = openNewProductModal;
 
+window.addEventListener("keydown", (event) => {
+
+    if(event.key === 'Escape') {
+        if (modal.newProductModal().style.display == "block") {
+            closeNewProductModal();
+        }
+        if (modal.productModal().style.display == "block") {
+            closeProductModal();
+        }
+    }
+}
+
+
 modal.productModal().addEventListener("keydown", (event) => {
   if(event.key === 'Escape') {
        closeProductModal();
