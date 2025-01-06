@@ -107,7 +107,7 @@ window.addEventListener("keydown", (event) => {
             closeProductModal();
         }
     }
-}
+});
 
 
 modal.productModal().addEventListener("keydown", (event) => {
