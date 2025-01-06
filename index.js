@@ -97,6 +97,11 @@ function closeNewProductModal() {
 
 document.getElementsByClassName("new-btn")[0].onclick = openNewProductModal;
 
+modal.productModal().addEventListener("keypress", (event) => {
+    if(event.key == "Esc") {
+        closeProductModal();
+    }
+});
 
 window.onclick = function (event) {
     if (event.target == modal.newProductModal()) {
