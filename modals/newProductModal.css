@@ -230,6 +230,15 @@
     background-color: rgb(41, 145, 107);
 }
 
+@media screen and (max-height: 770px) {
+    .new-product-modal {
+        margin: 1rem auto 1rem auto;
+
+        width: min(calc(100% - 40px), 36rem);
+        height: 45rem;
+    }
+}
+
 @media screen and (max-width: 500px) {
 
     .product-available-div {
