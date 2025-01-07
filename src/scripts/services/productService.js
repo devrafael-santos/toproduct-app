@@ -1,11 +1,12 @@
 const productService = {
     findAllSortPriceAsc: async () => {
-        const response = await fetch("http://localhost:8080/products?sort=price,asc");
+        const response = await fetch("https://toproduct-api-production.up.railway.app/products?sort=price,asc");
         const data = await response.json();
         return data.content;
     },
     createProduct: async () => {
-        const response = await fetch("http://localhost:8080/products", {
+        const response = await fetch("https://toproduct-api-production.up.railway.app/products", {
+
             method: "POST",
             headers: {
                 "Content-Type": "application/json",
