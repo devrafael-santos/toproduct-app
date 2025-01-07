@@ -6,6 +6,7 @@ const productService = {
     },
     createProduct: async () => {
         const response = await fetch("https://toproduct-api-production.up.railway.app/products", {
+
             method: "POST",
             headers: {
                 "Content-Type": "application/json",
